@@ -1,0 +1,15 @@
+C:\Users\aleja\houserentalv.0.1\bin\Debug\net7.0\houserentalv.0.1.exe
+C:\Users\aleja\houserentalv.0.1\bin\Debug\net7.0\houserentalv.0.1.deps.json
+C:\Users\aleja\houserentalv.0.1\bin\Debug\net7.0\houserentalv.0.1.runtimeconfig.json
+C:\Users\aleja\houserentalv.0.1\bin\Debug\net7.0\houserentalv.0.1.dll
+C:\Users\aleja\houserentalv.0.1\bin\Debug\net7.0\houserentalv.0.1.pdb
+C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.AssemblyReference.cache
+C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\houserentalv.0.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\houserentalv.0.1.AssemblyInfoInputs.cache
+C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\houserentalv.0.1.AssemblyInfo.cs
+C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.CoreCompileInputs.cache
+C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\houserentalv.0.1.dll
+C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\refint\houserentalv.0.1.dll
+C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\houserentalv.0.1.pdb
+C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\houserentalv.0.1.genruntimeconfig.cache
+C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\ref\houserentalv.0.1.dll
