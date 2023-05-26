@@ -1,0 +1,63 @@
+administrador 
+arendador 
+arendatario
+venderor
+comprador
+
+yo como arendador voy a publicar una casa para renta
+    precio
+    ubicacion
+    No. habitaciones 
+    deposito
+    contrato minimo
+    contrato exclusivo
+    metros cuadrados
+    servicios inclidos
+    amueblada 
+    aceptacion de mascotas
+    Nombre arendador
+    telefono 
+    correo electronico
+    descripcion
+    fotografia 
+yo como venderor voy a publicar una casa para venta
+    precio
+    ubicacion 
+    metros cuadrados
+    No. habitaciones 
+    amueblado 
+    campo libre gavamen
+    tipo de inmuenble
+    tipo de pago
+    Nombre venderor
+    telefono 
+    correo electronico
+    descripcion
+    fotografia 
+
+yo como arendatario debo poder buscar una inmuenble en renta
+    precio 
+    ubicacion
+    tipo de inmuenble
+    servicios inclidos
+yo como comprador debo poder buscar una inmuenble en venta
+    precio 
+    ubicacion
+    tipo de inmuenble
+    metros cuadrados
+    tipo de pago
+    descripcion
+    libre de gavamen
+    registro de inmuenble
+
+historias de usuarios
+    * Yo como Administrador entro al sistemas, registro mis datos para poder verificar 
+        la informacion de el venderor y el arendador para poder ser publicadas.
+
+    * Yo como Arendador entro al sistema, registo mis datos y publico mi inmueble en renta con los requerimientos establecidos.
+
+    * Yo como Arendatario entro al sistema registo mis datos y busco una inmueble que se adecue a mis necesidades renta.
+
+    * Yo como Venderor entro al sistema registo mis datos y publico mi inmueble en venta con los requerimientos establecidos.
+
+    * Yo como Comprador entro al sistema registo mis datos y busco un inmueble que se adecue a mis necesidades de compra.

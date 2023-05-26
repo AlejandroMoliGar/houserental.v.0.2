@@ -37,7 +37,7 @@ namespace RealEstate
                         break;
                     case "3":
                         Vendedor vendedor = new Vendedor();
-                        vendedor.PublicarCasaVenta();
+                        vendedor.PublishHouseForVent();
                         break;
                     case "4":
                         Comprador comprador = new Comprador();
@@ -80,29 +80,7 @@ namespace RealEstate
     }
 
 
-    class Vendedor
-    {
-        public string Nombre { get; set; }
-        public string Telefono { get; set; }
-        public string CorreoElectronico { get; set; }
-
-        public void PublicarCasaVenta()
-        {
-            Console.WriteLine("\n¡Publicar una Casa para Venta!");
-
-            CasaVenta casaVenta = new CasaVenta();
-
-            Console.Write("Precio: ");
-            casaVenta.Precio = Convert.ToDecimal(Console.ReadLine());
-
-            Console.Write("Ubicación: ");
-            casaVenta.Ubicacion = Console.ReadLine();
-
-            // Capturar los demás datos de la casa para venta
-
-            Console.WriteLine("¡Casa publicada exitosamente para venta!");
-        }
-    }
+    
 
     class Comprador
     {
