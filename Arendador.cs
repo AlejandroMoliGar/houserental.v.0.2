@@ -1,75 +1,123 @@
-using System;
+using Newtonsoft.Json;
+using System.IO;
 
-    public void PublicarCasaRenta()
-    {
+public class Arendador
+{
+    public decimal Price { get; set; }
+    public string Location { get; set; }
+    public int NumberOfRooms { get; set; }
+    public decimal Deposit { get; set; }
+    public int MinimumContractDuration { get; set; }
+    public bool ExclusiveContract { get; set; }
+    public decimal SquareMeters { get; set; }
+    public string IncludedServices { get; set; }
+    public bool Furnished { get; set; }
+    public bool PetsAllowed { get; set; }
+    public string LandlordName { get; set; }
+    public int PhoneNumber { get; set; }
+    public string Email { get; set; }
+    public string Description { get; set; }
+    public string Photo { get; set; }
+
+    public void PublishHouseForRent(){
+
         Console.WriteLine("\n¡Publicar una Casa para Renta!");
 
         Console.Write("Precio: ");
-        Precio = Convert.ToDecimal(Console.ReadLine());
+        decimal Price = Convert.ToDecimal(Console.ReadLine());
 
-        Console.Write("Ubicación: ");
-        Ubicacion = Console.ReadLine();
+        Console.Write("Ubicacion: ");
+        string Location = Console.ReadLine();
 
-        Console.Write("Número de habitaciones: ");
-        NumeroHabitaciones = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Numero de habitaciones: ");
+        int NumberOfRooms = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Depósito: ");
-        Deposito = Convert.ToDecimal(Console.ReadLine());
+        Console.Write("Deposito: ");
+        decimal Deposit = Convert.ToDecimal(Console.ReadLine());
 
         Console.Write("Duración mínima del contrato (en meses): ");
-        ContratoMinimo = Convert.ToInt32(Console.ReadLine());
+        int MinimumContractDuration = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Contrato exclusivo (s/n): ");
-        ContratoExclusivo = Console.ReadLine().ToLower() == "s";
+        Console.Write("Contrato Exclusivo (s/n): ");
+        bool ExclusiveContract = Console.ReadLine().ToLower() == "s";
 
         Console.Write("Metros cuadrados: ");
-        MetrosCuadrados = Convert.ToDecimal(Console.ReadLine());
+        decimal SquareMeters = Convert.ToDecimal(Console.ReadLine());
 
-        Console.Write("Servicios incluidos: ");
-        ServiciosIncluidos = Console.ReadLine();
+        Console.Write("incluye servicios (s/n): ");
+        string IncludedServices = Console.ReadLine();
 
         Console.Write("Amueblada (s/n): ");
-        Amueblada = Console.ReadLine().ToLower() == "s";
+        bool Furnished = Console.ReadLine().ToLower() == "s";
 
         Console.Write("Aceptación de mascotas (s/n): ");
-        AceptacionMascotas = Console.ReadLine().ToLower() == "s";
+        bool PetsAllowed = Console.ReadLine().ToLower() == "s";
 
-        Console.Write("Nombre del arrendador: ");
-        NombreArendador = Console.ReadLine();
+        Console.Write("Nombre del Arendador: ");
+        string LandlordName = Console.ReadLine();
 
-        Console.Write("Teléfono: ");
-        Telefono = Console.ReadLine();
+        Console.Write("Numero de Telefono: ");
+        int PhoneNumber = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Correo electrónico: ");
-        CorreoElectronico = Console.ReadLine();
+        Console.Write("Correo Electronico: ");
+        string Email = Console.ReadLine();
 
-        Console.Write("Descripción: ");
-        Descripcion = Console.ReadLine();
+        Console.Write("Descripcion: ");
+        string Description = Console.ReadLine();
 
-        Console.Write("Fotografía: ");
-        Fotografia = Console.ReadLine();
+        Console.Write("Fotos: ");
+        string Photo = Console.ReadLine();
 
         Console.WriteLine("¡Casa publicada exitosamente para renta!");
+
+        var Houserental = new
+        {
+            Price = Price,
+            Location = Location ,
+            NumberOfRooms = NumberOfRooms,
+            Deposit = Deposit,
+            MinimumContractDuration = MinimumContractDuration,
+            ExclusiveContract = ExclusiveContract,
+            SquareMeters = SquareMeters,
+            IncludedServices = IncludedServices,
+            Furnished = Furnished,
+            PetsAllowed = PetsAllowed,
+            LandlordName = LandlordName,
+            PhoneNumber = PhoneNumber,
+            Email = Email,
+            Description = Description,
+            Photo = Photo
+        };
+
+       // Serializar el objeto a formato JSON
+        string jsonData = JsonConvert.SerializeObject(Houserental, Formatting.Indented);
+
+        Console.WriteLine("Datos en formato JSON:");
+        Console.WriteLine(jsonData);
+
+        // Llamar al método para guardar el JSON
+        GuardarJson(jsonData);
     }
+
+    public static void GuardarJson(string jsonData)
+    {
+        try
+        {
+            // Obtener el directorio actual
+            string currentDirectory = Directory.GetCurrentDirectory();
+
+            // Crear un nuevo archivo de texto
+            string filePath = Path.Combine(currentDirectory, "Houserental.json");
+
+            // Guardar el JSON en el archivo
+            File.AppendAllText(filePath, jsonData + Environment.NewLine);
+
+            Console.WriteLine("Los datos se han guardado correctamente en el archivo .json.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error al guardar los datos: " + ex.Message);
+        }
+    }
+
 }
-
-public class Arendador : NewBaseType
-{
-        public decimal Precio { get; set; }
-        public string Ubicacion { get; set; }
-        public int NumeroHabitaciones { get; set; }
-        public decimal Deposito { get; set; }
-        public int ContratoMinimo { get; set; }
-        public bool ContratoExclusivo { get; set; }
-        public decimal MetrosCuadrados { get; set; }
-        public string ServiciosIncluidos { get; set; }
-        public bool Amueblada { get; set; }
-        public bool AceptacionMascotas { get; set; }
-        public string NombreArendador { get; set; }
-        public string Telefono { get; set; }
-        public string CorreoElectronico { get; set; }
-        public string Descripcion { get; set; }
-        public string Fotografia { get; set; }
-}
-
-

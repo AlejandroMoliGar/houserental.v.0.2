@@ -1,0 +1,36 @@
+[
+  {
+  "Price": 234.0,
+  "Location": "sdfg",
+  "NumberOfRooms": 2345,
+  "Deposit": 234.0,
+  "MinimumContractDuration": 1,
+  "ExclusiveContract": true,
+  "SquareMeters": 2345.0,
+  "IncludedServices": "s",
+  "Furnished": true,
+  "PetsAllowed": true,
+  "LandlordName": "sdfg",
+  "PhoneNumber": 345,
+  "Email": "345",
+  "Description": "wer",
+  "Photo": "wer"
+},
+{
+  "Price": 234.0,
+  "Location": "sdfg",
+  "NumberOfRooms": 2345,
+  "Deposit": 234.0,
+  "MinimumContractDuration": 1,
+  "ExclusiveContract": true,
+  "SquareMeters": 2345.0,
+  "IncludedServices": "s",
+  "Furnished": true,
+  "PetsAllowed": true,
+  "LandlordName": "sdfg",
+  "PhoneNumber": 345,
+  "Email": "345",
+  "Description": "wer",
+  "Photo": "wer"
+}
+]
