@@ -107,7 +107,7 @@ public class Vendedor
             string currentDirectory = Directory.GetCurrentDirectory();
 
             // Crear un nuevo archivo de texto
-            string filePath = Path.Combine(currentDirectory, "Houserental.json");
+            string filePath = Path.Combine(currentDirectory, "h.json");
 
             // Guardar el JSON en el archivo
             File.AppendAllText(filePath, jsonData + Environment.NewLine);
