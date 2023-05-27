@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aleja\\houserentalv.0.1\\houserentalv.0.1.csproj": {}
+    "c:\\Users\\aleja\\houserentalv.0.1\\houserentalv.0.1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aleja\\houserentalv.0.1\\houserentalv.0.1.csproj": {
+    "c:\\Users\\aleja\\houserentalv.0.1\\houserentalv.0.1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aleja\\houserentalv.0.1\\houserentalv.0.1.csproj",
+        "projectUniqueName": "c:\\Users\\aleja\\houserentalv.0.1\\houserentalv.0.1.csproj",
         "projectName": "houserentalv.0.1",
-        "projectPath": "C:\\Users\\aleja\\houserentalv.0.1\\houserentalv.0.1.csproj",
+        "projectPath": "c:\\Users\\aleja\\houserentalv.0.1\\houserentalv.0.1.csproj",
         "packagesPath": "C:\\Users\\aleja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aleja\\houserentalv.0.1\\obj\\",
+        "outputPath": "c:\\Users\\aleja\\houserentalv.0.1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aleja\\AppData\\Roaming\\NuGet\\NuGet.Config"
