@@ -8,14 +8,12 @@ namespace RealEstate
         {
             Console.WriteLine("¡Bienvenido al Sistema de Búsqueda de Inmuebles!");
 
-            Administrador administrador = new Administrador();
-            administrador.RegistrarAdministrador();
-
             bool exit = false;
 
             while (!exit)
             {
                 Console.WriteLine("\nPor favor, elija una opción:");
+                Console.WriteLine("0. Soy Administrador");
                 Console.WriteLine("1. Soy Arendador");
                 Console.WriteLine("2. Soy Arrendatario");
                 Console.WriteLine("3. Soy Vendedor");
@@ -27,6 +25,10 @@ namespace RealEstate
 
                 switch (option)
                 {
+                    case "0":
+                        Administrador administrador = new Administrador();
+                        administrador.UserAdmin();
+                        break;
                     case "1":
                         Arendador arendador = new Arendador();
                         arendador.PublishHouseForRent();
@@ -54,52 +56,5 @@ namespace RealEstate
 
             Console.WriteLine("¡Gracias por usar el Sistema de Búsqueda de Inmuebles! ¡Hasta luego!");
         }
-    }
-
-    class Administrador
-    {
-        public string Nombre { get; set; }
-        public string Telefono { get; set; }
-        public string CorreoElectronico { get; set; }
-
-        public void RegistrarAdministrador()
-        {
-            Console.WriteLine("¡Registro de Administrador!");
-
-            Console.Write("Nombre: ");
-            Nombre = Console.ReadLine();
-
-            Console.Write("Teléfono: ");
-            Telefono = Console.ReadLine();
-
-            Console.Write("Correo Electrónico: ");
-            CorreoElectronico = Console.ReadLine();
-
-            Console.WriteLine("¡Registro exitoso!");
-        }
-    }
-
-
-    
-
-    class Comprador
-    {
-        public void BuscarInmuebleVenta()
-        {
-            Console.WriteLine("\n¡Buscar un Inmueble en Venta!");
-
-            // Capturar los criterios de búsqueda
-
-            Console.WriteLine("¡Resultados de la búsqueda!");
-            // Mostrar los resultados encontrados
-        }
-    }
-
-    class CasaVenta
-    {
-        public decimal Precio { get; set; }
-        public string Ubicacion { get; set; }
-
-        // Otros atributos de la casa para venta
     }
 }

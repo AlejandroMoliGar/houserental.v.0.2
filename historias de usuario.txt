@@ -40,6 +40,7 @@ yo como arendatario debo poder buscar una inmuenble en renta
     ubicacion
     tipo de inmuenble
     servicios inclidos
+    fotografia
 yo como comprador debo poder buscar una inmuenble en venta
     precio 
     ubicacion
@@ -49,6 +50,7 @@ yo como comprador debo poder buscar una inmuenble en venta
     descripcion
     libre de gavamen
     registro de inmuenble
+    fotografia
 
 historias de usuarios
     * Yo como Administrador entro al sistemas, registro mis datos para poder verificar 

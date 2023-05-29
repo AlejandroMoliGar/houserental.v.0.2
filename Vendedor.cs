@@ -5,15 +5,13 @@ public class Vendedor
 {
     public decimal Price { get; set; }
     public string Location { get; set; }
-    public int NumberOfRooms { get; set; }
-    public decimal Deposit { get; set; }
-    public int MinimumContractDuration { get; set; }
-    public bool ExclusiveContract { get; set; }
     public decimal SquareMeters { get; set; }
-    public string IncludedServices { get; set; }
+    public int NumberOfRooms { get; set; }
     public bool Furnished { get; set; }
-    public bool PetsAllowed { get; set; }
-    public string LandlordName { get; set; }
+    public bool FreeOfLien { get; set; }
+    public string TypeProperty { get; set; }
+    public string PaymentType { get; set; }
+    public string VendorName { get; set; }
     public int PhoneNumber { get; set; }
     public string Email { get; set; }
     public string Description { get; set; }
@@ -29,32 +27,26 @@ public class Vendedor
         Console.Write("Ubicacion: ");
         string Location = Console.ReadLine();
 
-        Console.Write("Numero de habitaciones: ");
-        int NumberOfRooms = Convert.ToInt32(Console.ReadLine());
-
-        Console.Write("Deposito: ");
-        decimal Deposit = Convert.ToDecimal(Console.ReadLine());
-
-        Console.Write("Duración mínima del contrato (en meses): ");
-        int MinimumContractDuration = Convert.ToInt32(Console.ReadLine());
-
-        Console.Write("Contrato Exclusivo (s/n): ");
-        bool ExclusiveContract = Console.ReadLine().ToLower() == "s";
-
         Console.Write("Metros cuadrados: ");
         decimal SquareMeters = Convert.ToDecimal(Console.ReadLine());
 
-        Console.Write("incluye servicios (s/n): ");
-        string IncludedServices = Console.ReadLine();
+        Console.Write("Numero de habitaciones: ");
+        int NumberOfRooms = Convert.ToInt32(Console.ReadLine());
 
         Console.Write("Amueblada (s/n): ");
         bool Furnished = Console.ReadLine().ToLower() == "s";
 
-        Console.Write("Aceptación de mascotas (s/n): ");
-        bool PetsAllowed = Console.ReadLine().ToLower() == "s";
+        Console.Write("inmueble libre de garvamen (s/n): ");
+        bool FreeOfLien = Console.ReadLine().ToLower() == "s";
 
-        Console.Write("Nombre del Arendador: ");
-        string LandlordName = Console.ReadLine();
+        Console.Write("Tipo de Propiedad: ");
+        string TypeProperty = Console.ReadLine();
+
+        Console.Write("Tipo de Pago: ");
+        string PaymentType = Console.ReadLine();
+
+        Console.Write("Nombre del vendedor: ");
+        string VendorName = Console.ReadLine();
 
         Console.Write("Numero de Telefono: ");
         int PhoneNumber = Convert.ToInt32(Console.ReadLine());
@@ -68,21 +60,19 @@ public class Vendedor
         Console.Write("Fotos: ");
         string Photo = Console.ReadLine();
 
-        Console.WriteLine("¡Casa publicada exitosamente para renta!");
+        Console.WriteLine("¡Casa publicada exitosamente para Venta!");
 
         var Houserental = new
         {
             Price = Price,
             Location = Location ,
-            NumberOfRooms = NumberOfRooms,
-            Deposit = Deposit,
-            MinimumContractDuration = MinimumContractDuration,
-            ExclusiveContract = ExclusiveContract,
             SquareMeters = SquareMeters,
-            IncludedServices = IncludedServices,
+            NumberOfRooms = NumberOfRooms,
             Furnished = Furnished,
-            PetsAllowed = PetsAllowed,
-            LandlordName = LandlordName,
+            FreeOfLien = FreeOfLien,
+            TypeProperty = TypeProperty,
+            PaymentType = PaymentType,
+            VendorName = VendorName,
             PhoneNumber = PhoneNumber,
             Email = Email,
             Description = Description,
@@ -107,7 +97,7 @@ public class Vendedor
             string currentDirectory = Directory.GetCurrentDirectory();
 
             // Crear un nuevo archivo de texto
-            string filePath = Path.Combine(currentDirectory, "h.json");
+            string filePath = Path.Combine(currentDirectory, "HouseForSale.json");
 
             // Guardar el JSON en el archivo
             File.AppendAllText(filePath, jsonData + Environment.NewLine);
