@@ -1,0 +1,18 @@
+[
+  {
+    "Price": 234.0,
+    "Location": "sdfg",
+    "SquareMeters": 2345,
+    "NumberOfRooms": 234.0,
+    "Furnished": 1,
+    "FreeGavamen": true,
+    "PropertyType": "s",
+    "paymenttype": 234.0,
+    "SellerName": true,
+    "PhoneNumber": 345,
+    "Email": "345",
+    "Description": "wer",
+    "Photos": "wer"
+  }
+]
+

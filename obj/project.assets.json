@@ -55,19 +55,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aleja\\.nuget\\packages\\": {}
+    "D:\\Users\\maydau1524\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aleja\\houserentalv.0.1\\houserentalv.0.1.csproj",
+      "projectUniqueName": "D:\\Users\\houserental.v.0.1\\houserentalv.0.1.csproj",
       "projectName": "houserentalv.0.1",
-      "projectPath": "C:\\Users\\aleja\\houserentalv.0.1\\houserentalv.0.1.csproj",
-      "packagesPath": "C:\\Users\\aleja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aleja\\houserentalv.0.1\\obj\\",
+      "projectPath": "D:\\Users\\houserental.v.0.1\\houserentalv.0.1.csproj",
+      "packagesPath": "D:\\Users\\maydau1524\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\houserental.v.0.1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aleja\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "D:\\Users\\maydau1524\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"

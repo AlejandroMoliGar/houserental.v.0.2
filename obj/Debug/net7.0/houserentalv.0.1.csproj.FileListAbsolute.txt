@@ -15,3 +15,11 @@ C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\houserentalv.0.1.genruntimeconf
 C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\ref\houserentalv.0.1.dll
 C:\Users\aleja\houserentalv.0.1\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.CopyComplete
+D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.AssemblyReference.cache
+D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.AssemblyInfoInputs.cache
+D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.AssemblyInfo.cs
+D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.CoreCompileInputs.cache
+D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.dll
+D:\Users\houserental.v.0.1\obj\Debug\net7.0\refint\houserentalv.0.1.dll
+D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.pdb

@@ -1,27 +1,26 @@
 using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System.IO;
 
 public class Vendedor
 {
     public decimal Price { get; set; }
     public string Location { get; set; }
-    public int NumberOfRooms { get; set; }
-    public decimal Deposit { get; set; }
-    public int MinimumContractDuration { get; set; }
-    public bool ExclusiveContract { get; set; }
-    public decimal SquareMeters { get; set; }
-    public string IncludedServices { get; set; }
-    public bool Furnished { get; set; }
-    public bool PetsAllowed { get; set; }
-    public string LandlordName { get; set; }
-    public int PhoneNumber { get; set; }
+    public int SquareMeters  { get; set; }
+    public decimal NumberOfRooms { get; set; }
+    public int Furnished { get; set; }
+    public bool FreeGavamen { get; set; }
+    public decimal PropertyType { get; set; }
+    public decimal paymenttype { get; set; }
+    public bool SellerName { get; set; }
+    public bool PhoneNumber { get; set; }
     public string Email { get; set; }
-    public string Description { get; set; }
-    public string Photo { get; set; }
+    public int Description { get; set; }
+    public string Photos { get; set; }
 
-    public void PublishHouseForVent(){
+    public void PublishHouseForRent(){
 
-        Console.WriteLine("\n¡Publicar una Casa para Renta!");
+        Console.WriteLine("\n¡Publicar una Casa para Venta!");
 
         Console.Write("Precio: ");
         decimal Price = Convert.ToDecimal(Console.ReadLine());
@@ -29,95 +28,74 @@ public class Vendedor
         Console.Write("Ubicacion: ");
         string Location = Console.ReadLine();
 
+        Console.Write("Metros Cuadrados: ");
+        int SquareMeters = Convert.ToInt32(Console.ReadLine());
+
         Console.Write("Numero de habitaciones: ");
-        int NumberOfRooms = Convert.ToInt32(Console.ReadLine());
+        decimal NumberOfRooms = Convert.ToDecimal(Console.ReadLine());
 
-        Console.Write("Deposito: ");
-        decimal Deposit = Convert.ToDecimal(Console.ReadLine());
+        Console.Write("Amueblado (s/n): ");
+        int Furnished = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Duración mínima del contrato (en meses): ");
-        int MinimumContractDuration = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Campo libre gavmen: ");
+        bool FreeGavamen = Console.ReadLine().ToLower() == "s";
 
-        Console.Write("Contrato Exclusivo (s/n): ");
-        bool ExclusiveContract = Console.ReadLine().ToLower() == "s";
+        Console.Write("Tipo de propiedad: ");
+        decimal PropertyType = Convert.ToDecimal(Console.ReadLine());
 
-        Console.Write("Metros cuadrados: ");
-        decimal SquareMeters = Convert.ToDecimal(Console.ReadLine());
+        Console.Write("Tipo de pago: ");
+        string paymenttype = Console.ReadLine();
 
-        Console.Write("incluye servicios (s/n): ");
-        string IncludedServices = Console.ReadLine();
+        Console.Write("Nombre del vendedor ");
+        bool SellerName = Console.ReadLine().ToLower() == "s";
 
-        Console.Write("Amueblada (s/n): ");
-        bool Furnished = Console.ReadLine().ToLower() == "s";
-
-        Console.Write("Aceptación de mascotas (s/n): ");
-        bool PetsAllowed = Console.ReadLine().ToLower() == "s";
-
-        Console.Write("Nombre del Arendador: ");
-        string LandlordName = Console.ReadLine();
-
-        Console.Write("Numero de Telefono: ");
+        CConsole.Write("Numero de Telefono: ");
         int PhoneNumber = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Correo Electronico: ");
+        Console.Write("Correo electronico: ");
         string Email = Console.ReadLine();
 
         Console.Write("Descripcion: ");
-        string Description = Console.ReadLine();
+        int Description = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Fotos: ");
-        string Photo = Console.ReadLine();
+        Console.Write("Fotografias: ");
+        string Photos = Console.ReadLine();
 
-        Console.WriteLine("¡Casa publicada exitosamente para renta!");
-
-        var Houserental = new
-        {
-            Price = Price,
-            Location = Location ,
-            NumberOfRooms = NumberOfRooms,
-            Deposit = Deposit,
-            MinimumContractDuration = MinimumContractDuration,
-            ExclusiveContract = ExclusiveContract,
-            SquareMeters = SquareMeters,
-            IncludedServices = IncludedServices,
-            Furnished = Furnished,
-            PetsAllowed = PetsAllowed,
-            LandlordName = LandlordName,
-            PhoneNumber = PhoneNumber,
-            Email = Email,
-            Description = Description,
-            Photo = Photo
-        };
-
-       // Serializar el objeto a formato JSON
-        string jsonData = JsonConvert.SerializeObject(Houserental, Formatting.Indented);
-
-        Console.WriteLine("Datos en formato JSON:");
-        Console.WriteLine(jsonData);
-
-        // Llamar al método para guardar el JSON
-        GuardarJson(jsonData);
-    }
-
-    public static void GuardarJson(string jsonData)
     {
+        Console.WriteLine("\n¡Buscar un Inmueble en Venta!");
+
+        
         try
         {
-            // Obtener el directorio actual
-            string currentDirectory = Directory.GetCurrentDirectory();
+            // Leer el archivo JSON
+            string jsonData = File.ReadAllText(filePath);
 
-            // Crear un nuevo archivo de texto
-            string filePath = Path.Combine(currentDirectory, "h.json");
+            // Deserializar el JSON en una lista de objetos Vendedor
+            var houseRentalList = JsonConvert.DeserializeObject<List<Vendedor>>(jsonData);
 
-            // Guardar el JSON en el archivo
-            File.AppendAllText(filePath, jsonData + Environment.NewLine);
-
-            Console.WriteLine("Los datos se han guardado correctamente en el archivo .json.");
+            // Acceder a los objetos y sus propiedades
+            foreach (var houseRental in houseRentalList)
+            {
+                Console.WriteLine("Datos obtenidos del archivo:");
+                Console.WriteLine($"Precio: {houseRental.Price}");
+                Console.WriteLine($"Ubicación: {houseRental.Location}");
+                Console.WriteLine($"Metros cuadrados:{houseRental.SquareMeters}");
+                Console.WriteLine($"Numero de habitaciones: {houseRental.NumberOfRooms}");
+                Console.WriteLine($"Amueblado: {houseRental.Furnished}");
+                Console.WriteLine($"Campo libre gravamen: {houseRental.FreeGavamen}");
+                Console.WriteLine($"Tipo de propiedad: {houseRental.PropertyType}");
+                Console.WriteLine($"Tipo de pago: {houseRental.paymenttype}");
+                Console.WriteLine($"Nombre vendedor: {houseRental.SellerName}");
+                Console.WriteLine($"Telefono: {houseRental.PhoneNumber}");
+                Console.WriteLine($"Correo electronico: {houseRental.Email}");
+                Console.WriteLine($"Descripcion: {houseRental.Description}");
+                Console.WriteLine($"Fotografía: {houseRental.Photo}");
+                Console.WriteLine();
+            }
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Error al guardar los datos: " + ex.Message);
+            Console.WriteLine("Error al leer el archivo JSON: " + ex.Message);
         }
     }
-
 }
