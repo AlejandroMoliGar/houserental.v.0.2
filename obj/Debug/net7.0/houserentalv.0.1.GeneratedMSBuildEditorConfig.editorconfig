@@ -8,8 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = houserentalv._0._1
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\aleja\houserentalv.0.1\
-=======
-build_property.ProjectDir = C:\Users\luism\code\houserental.v.0.1\
->>>>>>> ecf47e0cb9b615fcf722244350d383a499f32987

@@ -30,23 +30,27 @@ public class Comprador
             string jsonData = File.ReadAllText(filePath);
 
             // Deserializar el JSON en un objeto Comprador
-            var property = JsonConvert.DeserializeObject<Comprador>(jsonData);
+            var houseforsaleList = JsonConvert.DeserializeObject<List<Vendedor>>(jsonData);
 
             // Acceder a las propiedades del objeto
-            Console.WriteLine("Datos obtenidos del archivo:");
-            Console.WriteLine($"Precio: {property.Price}");
-            Console.WriteLine($"Ubicación: {property.Location}");
-            Console.WriteLine($"Metros cuadrados: {property.SquareMeters}");
-            Console.WriteLine($"Número de habitaciones: {property.NumberOfRooms}");
-            Console.WriteLine($"Amueblado: {property.Furnished}");
-            Console.WriteLine($"Libre de gravamen: {property.FreeOfLien}");
-            Console.WriteLine($"Tipo de propiedad: {property.TypeProperty}");
-            Console.WriteLine($"Tipo de pago: {property.PaymentType}");
-            Console.WriteLine($"Nombre del vendedor: {property.VendorName}");
-            Console.WriteLine($"Teléfono: {property.PhoneNumber}");
-            Console.WriteLine($"Correo electrónico: {property.Email}");
-            Console.WriteLine($"Descripción: {property.Description}");
-            Console.WriteLine($"Foto: {property.Photo}");
+            foreach (var property in houseforsaleList)
+            {
+                Console.WriteLine("Datos obtenidos del archivo:");
+                Console.WriteLine($"Precio: {property.Price}");
+                Console.WriteLine($"Ubicación: {property.Location}");
+                Console.WriteLine($"Metros cuadrados: {property.SquareMeters}");
+                Console.WriteLine($"Número de habitaciones: {property.NumberOfRooms}");
+                Console.WriteLine($"Amueblado: {property.Furnished}");
+                Console.WriteLine($"Libre de gravamen: {property.FreeOfLien}");
+                Console.WriteLine($"Tipo de propiedad: {property.TypeProperty}");
+                Console.WriteLine($"Tipo de pago: {property.PaymentType}");
+                Console.WriteLine($"Nombre del vendedor: {property.VendorName}");
+                Console.WriteLine($"Teléfono: {property.PhoneNumber}");
+                Console.WriteLine($"Correo electrónico: {property.Email}");
+                Console.WriteLine($"Descripción: {property.Description}");
+                Console.WriteLine($"Foto: {property.Photo}");
+                Console.WriteLine();
+            }
         }
         catch (Exception ex)
         {

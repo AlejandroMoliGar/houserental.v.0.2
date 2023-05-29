@@ -4,33 +4,33 @@ using System.IO;
 public class Administrador
 {
     public string Name { get; set; }
-    public int PhoneNumber { get; set; }
+    public long PhoneNumber { get; set; } // Cambiado a long para permitir 10 dígitos
     public string Email { get; set; }
 
-    public void UserAdmin(){
+    public void UserAdmin()
+    {
+        Console.WriteLine("Regístrate como Administrador!");
 
-        Console.WriteLine("\registrate como Administrador!");
-
-        Console.Write("Nombre del Administador: ");
+        Console.Write("Nombre del Administrador: ");
         string Name = Console.ReadLine();
 
-        Console.Write("Numero de Telefono: ");
-        int PhoneNumber = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Número de Teléfono: ");
+        long PhoneNumber = Convert.ToInt64(Console.ReadLine()); // Cambiado a long
 
-        Console.Write("Correo Electronico: ");
+        Console.Write("Correo Electrónico: ");
         string Email = Console.ReadLine();
 
-        Console.WriteLine("¡te has registrado con exito!");
+        Console.WriteLine("¡Te has registrado con éxito!");
 
-        var Houserental = new
+        var admin = new
         {
             Name = Name,
             PhoneNumber = PhoneNumber,
-            Email = Email,
+            Email = Email
         };
 
-       // Serializar el objeto a formato JSON
-        string jsonData = JsonConvert.SerializeObject(Houserental, Formatting.Indented);
+        // Serializar el objeto a formato JSON
+        string jsonData = JsonConvert.SerializeObject(admin, Formatting.Indented);
 
         Console.WriteLine("Datos en formato JSON:");
         Console.WriteLine(jsonData);
@@ -59,5 +59,4 @@ public class Administrador
             Console.WriteLine("Error al guardar los datos: " + ex.Message);
         }
     }
-
 }
