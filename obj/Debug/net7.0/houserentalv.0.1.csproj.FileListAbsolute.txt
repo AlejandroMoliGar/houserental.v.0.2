@@ -15,6 +15,7 @@ C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\houserentalv.0.1.genruntimeconf
 C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\ref\houserentalv.0.1.dll
 C:\Users\aleja\houserentalv.0.1\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\aleja\houserentalv.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.CopyComplete
+<<<<<<< HEAD
 D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.AssemblyReference.cache
 D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.GeneratedMSBuildEditorConfig.editorconfig
 D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.AssemblyInfoInputs.cache
@@ -23,3 +24,22 @@ D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.CoreCompileI
 D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.dll
 D:\Users\houserental.v.0.1\obj\Debug\net7.0\refint\houserentalv.0.1.dll
 D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.pdb
+=======
+C:\Users\luism\code\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.AssemblyReference.cache
+C:\Users\luism\code\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luism\code\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.AssemblyInfoInputs.cache
+C:\Users\luism\code\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.AssemblyInfo.cs
+C:\Users\luism\code\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.CoreCompileInputs.cache
+C:\Users\luism\code\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.dll
+C:\Users\luism\code\houserental.v.0.1\obj\Debug\net7.0\refint\houserentalv.0.1.dll
+C:\Users\luism\code\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.pdb
+>>>>>>> 87475a6c06efe6c9b8851ff7e42714af46ad4810
+D:\Users\houserental.v.0.1\bin\Debug\net7.0\houserentalv.0.1.exe
+D:\Users\houserental.v.0.1\bin\Debug\net7.0\houserentalv.0.1.deps.json
+D:\Users\houserental.v.0.1\bin\Debug\net7.0\houserentalv.0.1.runtimeconfig.json
+D:\Users\houserental.v.0.1\bin\Debug\net7.0\houserentalv.0.1.dll
+D:\Users\houserental.v.0.1\bin\Debug\net7.0\houserentalv.0.1.pdb
+D:\Users\houserental.v.0.1\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.CopyComplete
+D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.genruntimeconfig.cache
+D:\Users\houserental.v.0.1\obj\Debug\net7.0\ref\houserentalv.0.1.dll

@@ -1,0 +1,31 @@
+[{
+  "Price": 345.0,
+  "Location": "dsfghj",
+  "SquareMeters": 34.0,
+  "NumberOfRooms": 4,
+  "Furnished": true,
+  "FreeOfLien": true,
+  "TypeProperty": "casa dde carton",
+  "PaymentType": "a vake",
+  "VendorName": "sdf",
+  "PhoneNumber": 2345,
+  "Email": "sdf",
+  "Description": "234sd",
+  "Photo": "sdvf"
+},
+{
+  "Price": 2000.0,
+  "Location": "calle colima ",
+  "SquareMeters": 232.0,
+  "NumberOfRooms": 4,
+  "Furnished": false,
+  "FreeOfLien": false,
+  "TypeProperty": "casa de carton",
+  "PaymentType": "a vales",
+  "VendorName": "el vitor jaja:v",
+  "PhoneNumber": 304302032,
+  "Email": "yeah@Loco.com",
+  "Description": "casa con una vista al mar ",
+  "Photo": "no"
+}
+]

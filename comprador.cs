@@ -1,15 +1,15 @@
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.IO;
 
-public class Vendedor 
+public class Comprador
 {
     public decimal Price { get; set; }
     public string Location { get; set; }
     public decimal SquareMeters { get; set; }
     public int NumberOfRooms { get; set; }
     public bool Furnished { get; set; }
+    public bool FreeOfLien { get; set; }
     public string TypeProperty { get; set; }
     public string PaymentType { get; set; }
     public string VendorName { get; set; }
@@ -17,14 +17,11 @@ public class Vendedor
     public string Email { get; set; }
     public string Description { get; set; }
     public string Photo { get; set; }
-    public bool FreeOfLien { get; set; } 
-    // Nueva propiedad agregada
-    // Resto del código de la clase
-    // ...
 
-    public void PublishHouseForVent()
+    public void BuscarInmuebleVenta()
     {
-        Console.WriteLine("\nPublicar una Casa para Venta!");
+        Console.WriteLine("\nBuscar un Inmueble en Venta!");
+
         string filePath = @"C:\Users\aleja\houserentalv.0.1\HouseForSale.json";
 
         try
@@ -32,10 +29,10 @@ public class Vendedor
             // Leer el archivo JSON
             string jsonData = File.ReadAllText(filePath);
 
-            // Deserializar el JSON en una lista de objetos Vendedor
+            // Deserializar el JSON en un objeto Comprador
             var houseforsaleList = JsonConvert.DeserializeObject<List<Vendedor>>(jsonData);
 
-            // Acceder a las propiedades de los objetos
+            // Acceder a las propiedades del objeto
             foreach (var property in houseforsaleList)
             {
                 Console.WriteLine("Datos obtenidos del archivo:");

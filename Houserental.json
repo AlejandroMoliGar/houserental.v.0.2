@@ -32,5 +32,25 @@
   "Email": "345",
   "Description": "wer",
   "Photo": "wer"
+},
+{
+  "Price": 343.0,
+  "Location": "Adolfo lopez Mateos ",
+  "NumberOfRooms": 2,
+  "Deposit": 1700.0,
+  "MinimumContractDuration": 12,
+  "ExclusiveContract": false,
+  "SquareMeters": 34.0,
+  "IncludedServices": "s",
+  "Furnished": true,
+  "PetsAllowed": true,
+  "LandlordName": "enedina",
+  "PhoneNumber": 242314221,
+  "Email": "sdga@des.com",
+  "Description": "casa con ventanas",
+  "Photo": "si"
 }
 ]
+
+
+
