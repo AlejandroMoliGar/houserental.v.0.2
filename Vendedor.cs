@@ -3,61 +3,104 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-public class Vendedor 
+public class Seller
 {
     public decimal Price { get; set; }
     public string Location { get; set; }
     public decimal SquareMeters { get; set; }
     public int NumberOfRooms { get; set; }
     public bool Furnished { get; set; }
-    public string TypeProperty { get; set; }
+    public string PropertyType { get; set; }
     public string PaymentType { get; set; }
-    public string VendorName { get; set; }
+    public string SellerName { get; set; }
     public int PhoneNumber { get; set; }
     public string Email { get; set; }
     public string Description { get; set; }
     public string Photo { get; set; }
-    public bool FreeOfLien { get; set; } 
-    // Nueva propiedad agregada
-    // Resto del código de la clase
-    // ...
+    public bool FreeOfLiens { get; set; }
 
-    public void PublishHouseForVent()
+    public void PublishHouseForSale()
     {
-        Console.WriteLine("\nPublicar una Casa para Venta!");
+        Console.WriteLine("\nPublish a House for Sale!");
+
         string filePath = @"C:\Users\aleja\houserentalv.0.1\HouseForSale.json";
 
         try
         {
-            // Leer el archivo JSON
-            string jsonData = File.ReadAllText(filePath);
+            List<Seller> houseForSaleList;
 
-            // Deserializar el JSON en una lista de objetos Vendedor
-            var houseforsaleList = JsonConvert.DeserializeObject<List<Vendedor>>(jsonData);
-
-            // Acceder a las propiedades de los objetos
-            foreach (var property in houseforsaleList)
+            // Read the JSON file if it exists
+            if (File.Exists(filePath))
             {
-                Console.WriteLine("Datos obtenidos del archivo:");
-                Console.WriteLine($"Precio: {property.Price}");
-                Console.WriteLine($"Ubicación: {property.Location}");
-                Console.WriteLine($"Metros cuadrados: {property.SquareMeters}");
-                Console.WriteLine($"Número de habitaciones: {property.NumberOfRooms}");
-                Console.WriteLine($"Amueblado: {property.Furnished}");
-                Console.WriteLine($"Libre de gravamen: {property.FreeOfLien}");
-                Console.WriteLine($"Tipo de propiedad: {property.TypeProperty}");
-                Console.WriteLine($"Tipo de pago: {property.PaymentType}");
-                Console.WriteLine($"Nombre del vendedor: {property.VendorName}");
-                Console.WriteLine($"Teléfono: {property.PhoneNumber}");
-                Console.WriteLine($"Correo electrónico: {property.Email}");
-                Console.WriteLine($"Descripción: {property.Description}");
-                Console.WriteLine($"Foto: {property.Photo}");
-                Console.WriteLine();
+                // Read the file content
+                string jsonData = File.ReadAllText(filePath);
+
+                // Deserialize the JSON into a list of Seller objects
+                houseForSaleList = JsonConvert.DeserializeObject<List<Seller>>(jsonData);
             }
+            else
+            {
+                // If the file doesn't exist, create a new empty list
+                houseForSaleList = new List<Seller>();
+            }
+
+            // Create a new Seller object with user-provided data
+            Seller newHouseForSale = new Seller();
+
+            Console.Write("Price: ");
+            newHouseForSale.Price = Convert.ToDecimal(Console.ReadLine());
+
+            Console.Write("Location: ");
+            newHouseForSale.Location = Console.ReadLine();
+
+            Console.Write("Square Meters: ");
+            newHouseForSale.SquareMeters = Convert.ToDecimal(Console.ReadLine());
+
+            Console.Write("Number of Rooms: ");
+            newHouseForSale.NumberOfRooms = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Furnished (true/false): ");
+            newHouseForSale.Furnished = Convert.ToBoolean(Console.ReadLine());
+
+            Console.Write("Free of Liens (true/false): ");
+            newHouseForSale.FreeOfLiens = Convert.ToBoolean(Console.ReadLine());
+
+            Console.Write("Property Type: ");
+            newHouseForSale.PropertyType = Console.ReadLine();
+
+            Console.Write("Payment Type: ");
+            newHouseForSale.PaymentType = Console.ReadLine();
+
+            Console.Write("Seller Name: ");
+            newHouseForSale.SellerName = Console.ReadLine();
+
+            Console.Write("Phone Number: ");
+            newHouseForSale.PhoneNumber = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Email: ");
+            newHouseForSale.Email = Console.ReadLine();
+
+            Console.Write("Description: ");
+            newHouseForSale.Description = Console.ReadLine();
+
+            Console.Write("Photo: ");
+            newHouseForSale.Photo = Console.ReadLine();
+
+            // Add the new object to the list
+            houseForSaleList.Add(newHouseForSale);
+
+            // Serialize the list of objects to JSON format
+            string json = JsonConvert.SerializeObject(houseForSaleList, Formatting.Indented);
+
+            // Save the JSON to the file
+            File.WriteAllText(filePath, json);
+
+            Console.WriteLine("The house for sale has been successfully published.");
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Error al leer el archivo JSON: " + ex.Message);
+            Console.WriteLine("Error publishing the house for sale: " + ex.Message);
         }
     }
 }
+

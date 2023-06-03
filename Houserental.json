@@ -50,7 +50,25 @@
   "Description": "casa con ventanas",
   "Photo": "si"
 }
-]
+{
+  "precio": 150000,
+  "ubicacion": "Ciudad XYZ",
+  "metrosCuadrados": 120,
+  "habitaciones": 3,
+  "amueblado": true,
+  "campoLibreGavamen": false,
+  "tipoPropiedad": "Casa",
+  "tipoPago": "Contado",
+  "nombreVendedor": "Juan Pérez",
+  "telefono": "1234567890",
+  "correoElectronico": "juan.perez@example.com",
+  "descripcion": "Hermosa casa en excelente ubicación",
+  "fotografias": 
+}
+
+
+
+
 
 
 
