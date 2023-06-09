@@ -14,7 +14,7 @@ namespace RealEstate
             {
                 Console.WriteLine("\nPor favor, elija una opción:");
                 Console.WriteLine("0. Soy Administrador");
-                Console.WriteLine("1. Soy Arendador");
+                Console.WriteLine("1. Soy Arrendador");
                 Console.WriteLine("2. Soy Arrendatario");
                 Console.WriteLine("3. Soy Vendedor");
                 Console.WriteLine("4. Soy Comprador");
@@ -32,19 +32,18 @@ namespace RealEstate
                     case "1":
                         Arendador arendador = new Arendador();
                         arendador.PublishHouseForRent();
-                        break;
-                    case "2":
-                        Arendatario arendatario = new Arendatario();
-                        arendatario.BuscarInmuebleRenta();
+                     case "2":
+                         Arrendatario arrendatario = new Arrendatario();
+                        arrendatario.PublishHouseForRent();
                         break;
                     case "3":
                         Vendedor vendedor = new Vendedor();
-                        vendedor.PublishHouseForVent();
+                        vendedor.PublishHouseForSale();
                         break;
                     case "4":
                         Comprador comprador = new Comprador();
                         comprador.BuscarInmuebleVenta();
-                        break;
+                       break;
                     case "5":
                         exit = true;
                         break;

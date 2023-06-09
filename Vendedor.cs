@@ -1,30 +1,11 @@
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.IO;
-
-public class Seller
+class Vendedor
 {
-    public decimal Price { get; set; }
-    public string Location { get; set; }
-    public decimal SquareMeters { get; set; }
-    public int NumberOfRooms { get; set; }
-    public bool Furnished { get; set; }
-    public string PropertyType { get; set; }
-    public string PaymentType { get; set; }
-    public string SellerName { get; set; }
-    public int PhoneNumber { get; set; }
-    public string Email { get; set; }
-    public string Description { get; set; }
-    public string Photo { get; set; }
-    public bool FreeOfLiens { get; set; }
-
-    public void PublishHouseForSale()
+    public static void PublishHouseForSale()
     {
         Console.WriteLine("\nPublish a House for Sale!");
 
         string filePath = @"C:\Users\aleja\houserentalv.0.1\HouseForSale.json";
-
+    
         try
         {
             List<Seller> houseForSaleList;
@@ -45,46 +26,22 @@ public class Seller
             }
 
             // Create a new Seller object with user-provided data
-            Seller newHouseForSale = new Seller();
-
-            Console.Write("Price: ");
-            newHouseForSale.Price = Convert.ToDecimal(Console.ReadLine());
-
-            Console.Write("Location: ");
-            newHouseForSale.Location = Console.ReadLine();
-
-            Console.Write("Square Meters: ");
-            newHouseForSale.SquareMeters = Convert.ToDecimal(Console.ReadLine());
-
-            Console.Write("Number of Rooms: ");
-            newHouseForSale.NumberOfRooms = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Furnished (true/false): ");
-            newHouseForSale.Furnished = Convert.ToBoolean(Console.ReadLine());
-
-            Console.Write("Free of Liens (true/false): ");
-            newHouseForSale.FreeOfLiens = Convert.ToBoolean(Console.ReadLine());
-
-            Console.Write("Property Type: ");
-            newHouseForSale.PropertyType = Console.ReadLine();
-
-            Console.Write("Payment Type: ");
-            newHouseForSale.PaymentType = Console.ReadLine();
-
-            Console.Write("Seller Name: ");
-            newHouseForSale.SellerName = Console.ReadLine();
-
-            Console.Write("Phone Number: ");
-            newHouseForSale.PhoneNumber = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Email: ");
-            newHouseForSale.Email = Console.ReadLine();
-
-            Console.Write("Description: ");
-            newHouseForSale.Description = Console.ReadLine();
-
-            Console.Write("Photo: ");
-            newHouseForSale.Photo = Console.ReadLine();
+            var newHouseForSale = new
+            {
+                Price = Convert.ToDecimal(Console.ReadLine()),
+                Location = Console.ReadLine(),
+                SquareMeters = Convert.ToDecimal(Console.ReadLine()),
+                NumberOfRooms = Convert.ToInt32(Console.ReadLine()),
+                Furnished = Convert.ToBoolean(Console.ReadLine()),
+                FreeOfLiens = Convert.ToBoolean(Console.ReadLine()),
+                PropertyType = Console.ReadLine(),
+                PaymentType = Console.ReadLine(),
+                SellerName = Console.ReadLine(),
+                PhoneNumber = Convert.ToInt32(Console.ReadLine()),
+                Email = Console.ReadLine(),
+                Description = Console.ReadLine(),
+                Photo = Console.ReadLine()
+            };
 
             // Add the new object to the list
             houseForSaleList.Add(newHouseForSale);
@@ -102,5 +59,13 @@ public class Seller
             Console.WriteLine("Error publishing the house for sale: " + ex.Message);
         }
     }
-}
 
+    static void Main(string[] args)
+    {
+        Console.WriteLine("¡Bienvenido al Sistema de Búsqueda de Inmuebles!");
+
+        bool exit = false;
+
+        // Resto del código...
+    }
+}
