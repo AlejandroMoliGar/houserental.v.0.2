@@ -1,18 +1,52 @@
-[
-  {
-    "Price": 234.0,
-    "Location": "sdfg",
-    "SquareMeters": 2345,
-    "NumberOfRooms": 234.0,
-    "Furnished": 1,
-    "FreeGavamen": true,
-    "PropertyType": "s",
-    "paymenttype": 234.0,
-    "SellerName": true,
-    "PhoneNumber": 345,
-    "Email": "345",
-    "Description": "wer",
-    "Photos": "wer"
-  }
-]
+{
+  "price": "2500",
+  "location": "123 Main Street, City, Country",
+  "number_of_rooms": 3,
+  "deposit": "1000",
+  "minimum_contract_duration": "6 months",
+  "exclusive_contract": true,
+  "square_meters": 150,
+  "services_included": ["water", "electricity", "internet"],
+  "furnished": true,
+  "pets_allowed": false,
+  "landlord_name": "John Smith",
+  "phone": "+1234567890",
+  "email": "john.smith@example.com",
+  "description": "Spacious apartment with a beautiful view of the city.",
+  "photo": "https://example.com/photos/apartment.jpg"
+}
+{
+  "price": "2500",
+  "location": "123 Main Street, City, Country",
+  "roperty_type": "apartment",
+  "services_included": ["water", "electricity", "internet"],
+  "photo": "https://example.com/photos/apartment.jpg"
+}
+{
+  "price": "250000",
+  "location": "123 Main Street, City, Country",
+  "square_meters": 200,
+  "number_of_rooms": 4,
+  "furnished": true,
+  "security_deposit": false,
+  "property_type": "house",
+  "payment_type": "cash",
+  "seller_name": "John Doe",
+  "phone": "+1234567890",
+  "email": "john.doe@example.com",
+  "description": "Spacious house with a beautiful garden in a quiet neighborhood.",
+  "photo": "https://example.com/photos/house.jpg"
+}
+{
+  "price": "250000",
+  "location": "123 Main Street, City, Country",
+  "property_type": "house",
+  "square_meters": 200,
+  "payment_type": "cash",
+  "description": "Looking for a spacious house in a convenient location.",
+  "free_of_liens": true,
+  "property_registration": true,
+  "photo": "https://example.com/photos/house.jpg"
+}
+
 
