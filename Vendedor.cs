@@ -1,71 +1,113 @@
-class Vendedor
-{
-    public static void PublishHouseForSale()
-    {
-        Console.WriteLine("\nPublish a House for Sale!");
+using Newtonsoft.Json;
+using System.IO;
 
-        string filePath = @"C:\Users\aleja\houserentalv.0.1\HouseForSale.json";
-    
+public class Vendedor
+{
+    public decimal Price { get; set; }
+    public string Location { get; set; }
+    public decimal SquareMeters { get; set; }
+    public int NumberOfRooms { get; set; }
+    public bool Furnished { get; set; }
+    public bool FreeOfLien { get; set; }
+    public string TypeProperty { get; set; }
+    public string PaymentType { get; set; }
+    public string VendorName { get; set; }
+    public int PhoneNumber { get; set; }
+    public string Email { get; set; }
+    public string Description { get; set; }
+    public string Photo { get; set; }
+
+    public void PublishHouseForVent(){
+
+        Console.WriteLine("\n¡Publicar una Casa para Renta!");
+
+        Console.Write("Precio: ");
+        decimal Price = Convert.ToDecimal(Console.ReadLine());
+
+        Console.Write("Ubicacion: ");
+        string Location = Console.ReadLine();
+
+        Console.Write("Metros cuadrados: ");
+        decimal SquareMeters = Convert.ToDecimal(Console.ReadLine());
+
+        Console.Write("Numero de habitaciones: ");
+        int NumberOfRooms = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Amueblada (s/n): ");
+        bool Furnished = Console.ReadLine().ToLower() == "s";
+
+        Console.Write("inmueble libre de garvamen (s/n): ");
+        bool FreeOfLien = Console.ReadLine().ToLower() == "s";
+
+        Console.Write("Tipo de Propiedad: ");
+        string TypeProperty = Console.ReadLine();
+
+        Console.Write("Tipo de Pago: ");
+        string PaymentType = Console.ReadLine();
+
+        Console.Write("Nombre del vendedor: ");
+        string VendorName = Console.ReadLine();
+
+        Console.Write("Numero de Telefono: ");
+        int PhoneNumber = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Correo Electronico: ");
+        string Email = Console.ReadLine();
+
+        Console.Write("Descripcion: ");
+        string Description = Console.ReadLine();
+
+        Console.Write("Fotos: ");
+        string Photo = Console.ReadLine();
+
+        Console.WriteLine("¡Casa publicada exitosamente para Venta!");
+
+        var Houserental = new
+        {
+            Price = Price,
+            Location = Location ,
+            SquareMeters = SquareMeters,
+            NumberOfRooms = NumberOfRooms,
+            Furnished = Furnished,
+            FreeOfLien = FreeOfLien,
+            TypeProperty = TypeProperty,
+            PaymentType = PaymentType,
+            VendorName = VendorName,
+            PhoneNumber = PhoneNumber,
+            Email = Email,
+            Description = Description,
+            Photo = Photo
+        };
+
+       // Serializar el objeto a formato JSON
+        string jsonData = JsonConvert.SerializeObject(Houserental, Formatting.Indented);
+
+        Console.WriteLine("Datos en formato JSON:");
+        Console.WriteLine(jsonData);
+
+        // Llamar al método para guardar el JSON
+        GuardarJson(jsonData);
+    }
+
+    public static void GuardarJson(string jsonData)
+    {
         try
         {
-            List<Seller> houseForSaleList;
+            // Obtener el directorio actual
+            string currentDirectory = Directory.GetCurrentDirectory();
 
-            // Read the JSON file if it exists
-            if (File.Exists(filePath))
-            {
-                // Read the file content
-                string jsonData = File.ReadAllText(filePath);
+            // Crear un nuevo archivo de texto
+            string filePath = Path.Combine(currentDirectory, "HouseForSale.json");
 
-                // Deserialize the JSON into a list of Seller objects
-                houseForSaleList = JsonConvert.DeserializeObject<List<Seller>>(jsonData);
-            }
-            else
-            {
-                // If the file doesn't exist, create a new empty list
-                houseForSaleList = new List<Seller>();
-            }
+            // Guardar el JSON en el archivo
+            File.AppendAllText(filePath, jsonData + Environment.NewLine);
 
-            // Create a new Seller object with user-provided data
-            var newHouseForSale = new
-            {
-                Price = Convert.ToDecimal(Console.ReadLine()),
-                Location = Console.ReadLine(),
-                SquareMeters = Convert.ToDecimal(Console.ReadLine()),
-                NumberOfRooms = Convert.ToInt32(Console.ReadLine()),
-                Furnished = Convert.ToBoolean(Console.ReadLine()),
-                FreeOfLiens = Convert.ToBoolean(Console.ReadLine()),
-                PropertyType = Console.ReadLine(),
-                PaymentType = Console.ReadLine(),
-                SellerName = Console.ReadLine(),
-                PhoneNumber = Convert.ToInt32(Console.ReadLine()),
-                Email = Console.ReadLine(),
-                Description = Console.ReadLine(),
-                Photo = Console.ReadLine()
-            };
-
-            // Add the new object to the list
-            houseForSaleList.Add(newHouseForSale);
-
-            // Serialize the list of objects to JSON format
-            string json = JsonConvert.SerializeObject(houseForSaleList, Formatting.Indented);
-
-            // Save the JSON to the file
-            File.WriteAllText(filePath, json);
-
-            Console.WriteLine("The house for sale has been successfully published.");
+            Console.WriteLine("Los datos se han guardado correctamente en el archivo .json.");
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Error publishing the house for sale: " + ex.Message);
+            Console.WriteLine("Error al guardar los datos: " + ex.Message);
         }
     }
 
-    static void Main(string[] args)
-    {
-        Console.WriteLine("¡Bienvenido al Sistema de Búsqueda de Inmuebles!");
-
-        bool exit = false;
-
-        // Resto del código...
-    }
 }

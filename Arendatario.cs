@@ -24,7 +24,7 @@ public class Arendatario
     {
         Console.WriteLine("\n¡Buscar un Inmueble en Renta!");
 
-        string filePath = @"C:\Users\aleja\houserentalv.0.1\Houserental.json";
+        string filePath = "..\\.\\Houserental.json";
 
         try
         {

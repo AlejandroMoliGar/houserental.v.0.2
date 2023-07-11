@@ -1,5 +1,0 @@
-D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.AssemblyReference.cache
-D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.GeneratedMSBuildEditorConfig.editorconfig
-D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.AssemblyInfoInputs.cache
-D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.AssemblyInfo.cs
-D:\Users\houserental.v.0.1\obj\Debug\net7.0\houserentalv.0.1.csproj.CoreCompileInputs.cache

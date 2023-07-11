@@ -1,0 +1,17 @@
+{
+  "Price": 234.0,
+  "Location": "SDFGH",
+  "NumberOfRooms": 23,
+  "Deposit": 1234.0,
+  "MinimumContractDuration": 23,
+  "ExclusiveContract": true,
+  "SquareMeters": 123.0,
+  "IncludedServices": "S",
+  "Furnished": true,
+  "PetsAllowed": true,
+  "LandlordName": "SDFG",
+  "PhoneNumber": 1234,
+  "Email": "ASDFGFS",
+  "Description": "SDFGS",
+  "Photo": "SDFS"
+}
